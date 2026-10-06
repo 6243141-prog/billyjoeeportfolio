@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Debugged Example</title>
+</head>
+<body>
+<script>
+  // Ask for name
+  var firstName = prompt("Write a name:");
+  var lastName = prompt("Write a last name:");
+
+  for (var i = 0; i < 5; i++) {
+    document.write(firstName + " " + lastName + "<br>");
+  }
+
+  // Average of 5 numbers
+  var sum = 0;
+  for (var i = 0; i < 5; i++) {
+    var num = Number(prompt("Write a number:"));
+    sum += num;
+  }
+  var avg = sum / 5;
+  document.write("<br>Average: " + avg);
+
+  // Validate numeric input
+  var t = 0;
+  var u = prompt("Please type a number:");
+  while (isNaN(u)) {
+    u = prompt("That was not a number, try again:");
+    t++;
+  }
+  for (var i = 0; i < t; i++) {
+    document.write("<br>hello");
+  }
+
+  // Sum numbers up to user input
+  var num2 = Number(prompt("Write a number:"));
+  var sum2 = 0;
+  for (var i = 0; i < num2; i++) {
+    sum2 += i;
+  }
+  var avg2 = sum2 / num2; // divide by count, not 0
+  document.write("<br>Average: " + avg2);
+
+  // Sum numbers by 3-step increments
+  var num3 = Number(prompt("Write a number:")) + 1;
+  var sum3 = 0;
+  var count3 = 0;
+  for (var i = 0; i < num3; i += 3) {
+    sum3 += i;
+    count3++;
+  }
+  var avg3 = sum3 / count3;
+  document.write("<br>Average: " + avg3);
+
+  // Print sequence with conditions
+  for (var i = 0; i < 110; i++) {
+    if (i % 3 === 0) {
+      document.write("coza");
+    } else if (i % 5 === 0) {
+      document.write("loza");
+    } else if (i % 7 === 0) {
+      document.write("woza");
+    } else {
+      document.write(i + " ");
+    }
+  }
+</script>
+</body>
+</html>
